@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name = "standardshell",
-    version = "1.0.0",
+    version = "1.0.1",
     author = "Machine Yadav",
     author_email = "machinexa@gmail.com",
     description = "Module for building shells",

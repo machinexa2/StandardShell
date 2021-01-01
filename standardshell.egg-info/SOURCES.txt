@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+standardshell/Shell.py
+standardshell/__init__.py
+standardshell.egg-info/PKG-INFO
+standardshell.egg-info/SOURCES.txt
+standardshell.egg-info/dependency_links.txt
+standardshell.egg-info/requires.txt
+standardshell.egg-info/top_level.txt
