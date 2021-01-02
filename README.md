@@ -1,5 +1,5 @@
 # StandardShell
-Build a standard shell
+Build a standard shell (It doesnt give you actual shell but makes you feel like you have one)
 
 ## Working
 * Shell is built by stdin and stdout. Take stdin and give stdout. This module is useful during RCE.
