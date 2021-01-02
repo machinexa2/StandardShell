@@ -1,11 +1,12 @@
 from os.path import join as path_join
 
 class LinuxShell:
-    def __init__(self, user, timeout = None):
+    def __init__(self, user, configure = None):
         self.user = user
         self.pwd = ""
         self.machine = f"{self.user}@machine:/home/{self.user}# "
-        self.configure()
+        if configure:
+            self.configure()
 
     def stdin(self):
         return input(self.machine)
@@ -38,6 +39,7 @@ class LinuxShell:
         while True:
             user_input = self.stdin().strip(' ')
             if user_input.startswith('cd '):
+                print(user_input)
                 temporary = user_input.split('cd ')[-1].strip(' ')
                 if '/' in temporary and temporary.startswith('/'):
                     self.pwd = temporary

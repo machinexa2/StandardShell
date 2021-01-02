@@ -6,12 +6,18 @@ Build a standard shell (It doesnt give you actual shell but makes you feel like 
 ```python
 from standard-shell import LinuxShell
 ```
-* To develop a shell define stdout yourself. stdin is predefined as keyboard input.
+* To develop a shell define `stdout` yourself. The `stdin` is predefined as keyboard input (you can override that too)
 ```python
-def rce_code(self, cmd):
+def sample_stdout(self, cmd):
 	""" Write RCE Code to send command and return cmd output """
 	return output
-LinuxShell.stdout = rce_code #pwd should return /home/username
+def sample_stdin(self):
+	""" Must return user_input """
+	user_input = input("$> ")
+	return user_input 
+
+LinuxShell.stdin = sample_stdin #must return user input
+LinuxShell.stdout = sample_stdout #pwd should return /home/username
 ```
 * Boom, You got a shell  
 ```python
